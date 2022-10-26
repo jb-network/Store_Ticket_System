@@ -2,11 +2,11 @@ import numbers
 from os import system
 
 menu_selection = 0
-menu_boundary = "***************************************************"
+menu_boundary = "*" * 50
 
 while menu_selection != 4:
     print(menu_boundary)
-    print("Welcome to Sweet's Emporium ticketing system")
+    print("Welcome to Sweet's Emporium")
     print(menu_boundary)
     print("Please choose the section that you are here to visit:")
     print("1. Medicine")
@@ -17,11 +17,11 @@ while menu_selection != 4:
     menu_selection = int(input("Your Selection (1-4): "))
 
     if menu_selection == 1:
-        numbers.medicine()
+        numbers.customer_ticket("m")
     elif menu_selection == 2:
-        numbers.perfumes()
+        numbers.customer_ticket("p")
     elif menu_selection == 3:
-        numbers.cosmetics()
+        numbers.customer_ticket("c")
     elif menu_selection == 4:
         print(menu_boundary)
         exit("Thanks for shopping at Sweet's Emporium")
